@@ -16,7 +16,7 @@ let bestCar = cars[0];
 if (localStorage.getItem("bestBrain")) {
 	for (let i = 0; i < cars.length; i++) {
 		cars[i].brain = JSON.parse(localStorage.getItem("bestBrain"));
-		if (i != 0) Network.mutate(cars[i].brain, 0.2);
+		if (i != 0) Network.mutate(cars[i].brain, 0.1);
 	}
 }
 
@@ -33,6 +33,18 @@ const traffic = [
 	new Car(road.getLaneCenter(1), -1500, 30, 50, "DUMMY", 2),
 	new Car(road.getLaneCenter(0), -1500, 30, 50, "DUMMY", 2),
 	new Car(road.getLaneCenter(1), -1700, 30, 50, "DUMMY", 2),
+	new Car(road.getLaneCenter(2), -1200, 30, 50, "DUMMY", 2),
+	new Car(road.getLaneCenter(1), -4500, 30, 50, "DUMMY", 2),
+	new Car(road.getLaneCenter(3), -4400, 30, 50, "DUMMY", 2),
+	new Car(road.getLaneCenter(2), -5500, 30, 50, "DUMMY", 2),
+	new Car(road.getLaneCenter(4), -5700, 30, 50, "DUMMY", 2),
+	new Car(road.getLaneCenter(2), -2900, 30, 50, "DUMMY", 2),
+	new Car(road.getLaneCenter(3), -3100, 30, 50, "DUMMY", 2),
+	new Car(road.getLaneCenter(2), -3200, 30, 50, "DUMMY", 2),
+	new Car(road.getLaneCenter(3), -3400, 30, 50, "DUMMY", 2),
+	new Car(road.getLaneCenter(1), -3500, 30, 50, "DUMMY", 2),
+	new Car(road.getLaneCenter(0), -3500, 30, 50, "DUMMY", 2),
+	new Car(road.getLaneCenter(1), -3700, 30, 50, "DUMMY", 2),
 ];
 
 function generateCars(n) {
